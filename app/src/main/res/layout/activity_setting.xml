@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/setting"
+        android:textSize="25sp" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/card"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Цвет Окна -->
+            <LinearLayout
+                style="@style/lines"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout style="@style/frame">
+
+                    <View
+                        android:id="@+id/vWinColor"
+                        style="@style/view" />
+
+                    <View style="@style/view.top" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bnWinColor"
+                    style="@style/buttons"
+                    android:text="@string/win_color" />
+
+            </LinearLayout>
+
+            <!-- Цвет рамки -->
+            <LinearLayout
+                style="@style/lines"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout style="@style/frame">
+
+                    <View
+                        android:id="@+id/vFrameColor"
+                        style="@style/view" />
+
+                    <View style="@style/view.top" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bnFrameColor"
+                    style="@style/buttons"
+                    android:text="@string/frame_color" />
+
+            </LinearLayout>
+
+            <!-- Цвет диаграммы -->
+            <LinearLayout
+                style="@style/lines"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout style="@style/frame">
+
+                    <View
+                        android:id="@+id/vBarColor"
+                        style="@style/view" />
+
+                    <View style="@style/view.top" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bnBarColor"
+                    style="@style/buttons"
+                    android:text="@string/bar_color" />
+
+            </LinearLayout>
+
+            <!-- Цвет Панели -->
+            <LinearLayout style="@style/lines">
+
+                <FrameLayout style="@style/frame">
+
+                    <View
+                        android:id="@+id/vPanelColor"
+                        style="@style/view" />
+
+                    <View style="@style/view.top" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bnPanelColor"
+                    style="@style/buttons"
+                    android:text="@string/panel_color" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/style"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chColor"
+                    style="@style/radio_button"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/color" />
+
+                <RadioGroup
+                    android:id="@+id/rgStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbWave"
+                        style="@style/radio_button"
+                        android:checked="true"
+                        android:text="@string/wave" />
+
+                    <RadioButton
+                        android:id="@+id/rbBar"
+                        style="@style/radio_button"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:text="@string/bar" />
+
+                    <RadioButton
+                        android:id="@+id/rbSeg"
+                        style="@style/radio_button"
+                        android:text="@string/seg" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Кнопки -->
+
+    <androidx.cardview.widget.CardView
+        style="@style/card"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp">
+
+        <LinearLayout
+            style="@style/lines"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/bnCansel"
+                style="@style/buttons.ok"
+                android:layout_marginEnd="40dp"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/bnOk"
+                style="@style/buttons.ok"
+                android:text="@string/ok" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

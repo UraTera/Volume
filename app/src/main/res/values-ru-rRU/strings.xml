@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Громкость</string>
+
+    <string name="exit">Выход</string>
+
+    <string name="setting">Настройка</string>
+    <string name="win_color">Цвет окна</string>
+    <string name="frame_color">Цвет рамки</string>
+    <string name="bar_color">Цвет диаграммы</string>
+    <string name="panel_color">Цвет панели</string>
+
+    <string name="style">Стиль"</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="color">Цвет</string>
+
+</resources>

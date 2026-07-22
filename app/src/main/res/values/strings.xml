@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Volume</string>
+
+    <string name="_0" translatable="false">50%</string>
+    <string name="exit">Exit</string>
+    <string name="todo" translatable="false">TODO</string>
+
+    <string name="setting">Setting</string>
+    <string name="win_color">Window color</string>
+    <string name="frame_color">Frame color</string>
+    <string name="bar_color">Chart color</string>
+    <string name="panel_color">Panel color</string>
+
+    <string name="style">Style</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="cancel">Cance</string>
+
+    <string name="bar" translatable="false">Bar</string>
+    <string name="seg" translatable="false">Seg</string>
+    <string name="wave" translatable="false">Wave</string>
+    <string name="color">Color</string>
+
+</resources>
