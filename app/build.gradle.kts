@@ -44,7 +44,7 @@ dependencies {
 
     implementation(files("libs/SliderWavy.aar"))
     implementation(files("libs/Visualizer.aar"))
-    implementation("com.github.yukuku:ambilwarna:2.0.1")
+    implementation(files("libs/PaletteDialog.aar"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

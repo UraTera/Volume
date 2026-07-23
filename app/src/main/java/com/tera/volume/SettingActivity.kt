@@ -4,13 +4,12 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.tera.palettedialog.PaletteDialog
 import com.tera.volume.databinding.ActivitySettingBinding
-import yuku.ambilwarna.AmbilWarnaDialog
 
 class SettingActivity : AppCompatActivity() {
 
@@ -105,27 +104,17 @@ class SettingActivity : AppCompatActivity() {
         finish()
     }
 
-    // Библиотека AmbilWarna
-    private fun openDialog(fColor: Int, pos: Int) {
-        val dialog = AmbilWarnaDialog(this, fColor, false, object :
-            AmbilWarnaDialog.OnAmbilWarnaListener {
-            // ОК
-            override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
+    private fun openDialog(color: Int, pos: Int) {
+        PaletteDialog(this, color)
+            .setOnClickListener {
                 when (pos) {
-                    1 -> winColor = color
-                    2 -> frameColor = color
-                    3 -> barColor = color
-                    4 -> panelColor = color
+                    1 -> winColor = it
+                    2 -> frameColor = it
+                    3 -> barColor = it
+                    4 -> panelColor = it
                 }
                 setColor()
             }
-
-            // Отмена
-            override fun onCancel(dialog: AmbilWarnaDialog) {
-                Toast.makeText(applicationContext, "Действие отменено!", Toast.LENGTH_SHORT).show()
-            }
-        })
-        dialog.show()
     }
 
     private fun setColor() = with(binding) {

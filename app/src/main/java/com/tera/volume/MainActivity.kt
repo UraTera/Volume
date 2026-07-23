@@ -21,6 +21,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.tera.visualizer.VisualizerManager
 import com.tera.volume.databinding.ActivityMainBinding
+import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
 
@@ -179,14 +180,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTheme() {
-        val hsv = FloatArray(3)
-        Color.colorToHSV(winColor, hsv)
-        val value = hsv[2]
-        if (value > 0.7f)
+        val red = Color.red(winColor)
+        val green = Color.green(winColor)
+        val blue = Color.blue(winColor)
+        val brightness = sqrt(
+            0.299 * red * red +
+                    0.587 * green * green +
+                    0.114 * blue * blue
+        )
+        if (brightness > 150)
             lightTheme()
         else
             darkTheme()
-        //Log.d("myLogs", "value: $value")
     }
 
     private fun lightTheme() = with(binding) {
